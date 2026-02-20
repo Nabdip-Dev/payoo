@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Login</title>
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Thaiwind & daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+
+    <header
+        class="flex sticky top-0 bg-white z-50  justify-between items-center border-b border-[#666768]/20  pt-4 px-4 p-2">
+        <div class="flex gap-2">
+            <img class="w-16" src="./assets/logo.png" alt="">
+            <div>
+                <h1 class="text-[#080808] font-bold">$<span id="current-balance">45000</span></h1>
+                <p>Available Balance</p>
+            </div>
+        </div>
+        <div>
+            <a class="btn rounded-sm" href="./index.html"><i
+                    class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log
+                Out</a>
+        </div>
+    </header>
+
+    <section class="w-11/12 mx-auto mt-4">
+        <h1 class="text-[#080808] font-bold">Welcome to Pay<span class="text-[#7460FF]">oo</span></h1>
+        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+        <!-- All button -->
+
+        <div class="grid grid-cols-3 gap-4 mt-4">
+            <button class="btn flex-col px-1  py-10">
+                <img src="./assets/opt-1.png" alt="">
+                <p>Add Money</p>
+            </button>
+            <button class="btn flex-col px-1  py-10">
+                <img src="./assets/opt-2.png" alt="">
+                <p>Add Cashout</p>
+            </button>
+            <button class="btn flex-col px-0 py-10">
+                <img src="./assets/opt-3.png" alt="">
+                <p>Trasfer Money</p>
+            </button>
+            <button class="btn flex-col px-1 py-10">
+                <img src="./assets/opt-4.png" alt="">
+                <p>Get Bonus</p>
+            </button>
+            <button class="btn flex-col px-0 py-10">
+                <img src="./assets/opt-5.png" alt="">
+                <p>Pay Bill</p>
+            </button>
+            <button class="btn flex-col py-10">
+                <img src="./assets/opt-6.png" alt="">
+                <p>Transactions</p>
+            </button>
+        </div>
+
+    </section>
+
+    <section class="addmoney w-11/12 mx-auto mt-4 mb-10">
+        <h1 class="text-[#080808] font-bold">Add Money</h1>
+
+
+        <div class="login-from max-w-full mx-auto mt-4">
+            <fieldset class="fieldset bg-base-100  rounded-xl  p-4">
+                <label class="labelt text-[#080808] font-bold">Select A Bank</label>
+                <select id="select-bank" class="select w-full bg-base-200 rounded-full !border-0">
+                    <option disabled selected>Select Bank</option>
+                    <option>State Bank of India (SBI)</option>
+                    <option>Bank of Baroda</option>
+                    <option>Central Bank of India</option>
+                </select>
+
+                <label class="labelt text-[#080808] font-bold">Bank Account Number</label>
+                <input id="bank-number" type="text" maxlength="11"
+                    class="input w-full bg-base-200 rounded-full !border-0" placeholder="Enter 11 account digit number" />
+
+                <label class="labelt text-[#080808] font-bold">Amount to Add</label>
+                <input id="add-amount" type="number" class="input w-full bg-base-200 rounded-full !border-0 "
+                    placeholder="Add Amount to withdraw" />
+
+                <label class="label text-[#080808] font-bold">Pin Number</label>
+                <input id="add-money-pin" type="password" maxlength="4"
+                    class="input w-full bg-base-200 rounded-full !border-0 " placeholder="Enter 4 Digit Pin" />
+
+                <button id="add-money-btn" class="btn w-full mt-4 bg-[#3B25C1] text-white rounded-full">Add Money</button>
+
+            </fieldset>
+        </div>
+
+
+    </section>
+
+    <section class="cashout w-11/12 mx-auto mt-4 mb-10 hidden">
+        <h1 class="text-[#080808] font-bold">Cashout</h1>
+
+        <div class="login-from max-w-full mx-auto mt-4">
+            <fieldset class="fieldset bg-base-100  rounded-xl  p-4">
+
+
+                <label class="labelt text-[#080808] font-bold">Agent Number</label>
+                <input id="agent-number" type="tel" maxlength="11"
+                    class="input w-full bg-base-200 rounded-full !border-0" placeholder="Enter 11 digit number" />
+
+                <label class="labelt text-[#080808] font-bold">Amount</label>
+                <input id="cashout-amount" type="number" class="input w-full bg-base-200 rounded-full !border-0 "
+                    placeholder="Enter amount to withdraw" />
+
+                <label class="label text-[#080808] font-bold">Pin Number</label>
+                <input id="withdraw-pin" type="password" maxlength="4"
+                    class="input w-full bg-base-200 rounded-full !border-0 " placeholder="Enter 4 Digit Pin" />
+
+                <button id="withdraw-btn" class="btn w-full mt-4 bg-[#3B25C1] text-white rounded-full">Withdraw
+                    Money</button>
+
+            </fieldset>
+        </div>
+    </section>
+
+
+    <script src="./script/machine.js"></script>
+    <script src="./add-money.js"></script>
+    <script src="./script/cash-out.js"></script>
+
+</body>
+
+</html>

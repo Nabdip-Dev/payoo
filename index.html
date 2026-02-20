@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo | Login</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Thaiwind & daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen max-w-md bg-base-300 mx-auto">
+    <div class="logo w-[200px] mx-auto pt-32">
+        <img src="./assets/Logo-full.png" alt="">
+    </div>
+
+    <div class="login-from max-w-full mx-auto p-8 pt-16">
+        <fieldset class="fieldset bg-base-200  rounded-xl  p-4">
+
+            <label class="labelt text-[#080808] font-bold">Mobile Number</label>
+            <input id="input-number" type="text" maxlength="11"
+                class="input w-full rounded-full !border-0 " placeholder="Enter your number" />
+
+            <label class="label text-[#080808] font-bold">4 Digit Pin</label>
+            <input id="input-pin" type="password" maxlength="4" class="input w-full rounded-full !border-0"
+                placeholder="Enter 4 Digit Pin" />
+
+            <button id="btn" class="btn w-full mt-4 bg-[#3B25C1] text-white rounded-full">Login</button>
+
+        </fieldset>
+    </div>
+
+    <script src="./script/login.js"></script>
+
+</body>
+
+</html>
